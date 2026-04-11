@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- v1.0 vinay-kumar-sales-vp-portfolio -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Vinay Kumar — Sales Leader | 21+ Years | ₹1000Cr+ Revenue</title>
+<meta name="description" content="Seasoned Sales VP with 21+ years driving revenue growth in Mobile & Consumer Electronics. Samsung, Realme, Nokia."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Montserrat:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Playfair Display','serif'],
+        sans:    ['Montserrat','sans-serif'],
+        mono:    ['DM Mono','monospace'],
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ── Reset ── */
+*{margin:0;padding:0;box-sizing:border-box;cursor:none!important;}
+html{scroll-behavior:smooth;}
+body{background:#0A0A0F;color:#F0EDE8;font-family:'Montserrat',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:#0A0A0F;}
+::-webkit-scrollbar-thumb{background:#C9A84C;border-radius:2px;}
+
+/* ── Cursor ── */
+#cur-dot{position:fixed;width:8px;height:8px;background:#C9A84C;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+#cur-ring{position:fixed;width:34px;height:34px;border:1.5px solid rgba(201,168,76,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s;}
+
+/* ── Colors ── */
+/* Gold: #C9A84C   Gold-light: #E8C96A   Cream: #F0EDE8   Dark: #0A0A0F
+   Card-bg: #12121A   Border: rgba(201,168,76,0.18)
+   Red-growth: #E05252   Green-win: #4CAF7D */
+
+/* ── Glass ── */
+.glass{background:rgba(18,18,26,0.9);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);}
+
+/* ── Gradients ── */
+.text-gold{background:linear-gradient(135deg,#E8C96A,#C9A84C,#A07830);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.text-gold-solid{color:#C9A84C;}
+.text-cream{color:#F0EDE8;}
+
+/* ── Grid bg ── */
+.bg-grid-gold{
+  background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);
+  background-size:50px 50px;
+}
+
+/* ── Reveal ── */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-36px);transition:opacity .75s ease,transform .75s ease;}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(36px);transition:opacity .75s ease,transform .75s ease;}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+
+/* ── Counter ── */
+@keyframes countUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── Animations ── */
+@keyframes slideUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes goldPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,0);}50%{box-shadow:0 0 0 8px rgba(201,168,76,0.12);}}
+@keyframes shimmer{0%{background-position:-200% center;}100%{background-position:200% center;}}
+@keyframes barGrow{from{width:0;}to{width:var(--w);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes spin-slow{from{transform:rotate(0deg);}to{transform:rotate(360deg);};}
+@keyframes revealLine{from{width:0;}to{width:100%;}}
+@keyframes numberRoll{from{transform:translateY(100%);opacity:0;}to{transform:translateY(0);opacity:1;}}
+@keyframes glowPulse{0%,100%{opacity:.6;}50%{opacity:1;}}
+@keyframes drawPath{from{stroke-dashoffset:1000;}to{stroke-dashoffset:0;}}
+@keyframes salesBar{from{transform:scaleY(0);}to{transform:scaleY(1);}}
+
+.anim-s1{animation:slideUp .7s .05s ease both;}
+.anim-s2{animation:slideUp .7s .15s ease both;}
+.anim-s3{animation:slideUp .7s .25s ease both;}
+.anim-s4{animation:slideUp .7s .35s ease both;}
+.anim-s5{animation:slideUp .7s .45s ease both;}
+.anim-ticker{animation:ticker 28s linear infinite;}
+.anim-float{animation:float 5s ease-in-out infinite;}
+.anim-float2{animation:float 6s 1.5s ease-in-out infinite;}
+.shimmer-text{
+  background:linear-gradient(90deg,#C9A84C 0%,#F5E090 40%,#C9A84C 60%,#A07830 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 4s linear infinite;
+}
+
+/* ── Card hover ── */
+.exp-card{transition:transform .3s,box-shadow .3s,border-color .3s;}
+.exp-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(201,168,76,0.14);}
+
+/* ── Timeline ── */
+.timeline-spine{position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,#C9A84C,rgba(201,168,76,0.2),transparent);}
+
+/* ── Progress bar ── */
+.skill-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#C9A84C,#E8C96A);transform-origin:left;animation:barGrow .8s ease forwards;}
+
+/* ── Nav underline ── */
+.nav-link{position:relative;}
+.nav-link::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:#C9A84C;transition:width .3s;}
+.nav-link:hover::after,.nav-link.active::after{width:100%;}
+
+/* ── Sales chart bars ── */
+.chart-bar{transform-origin:bottom;transform:scaleY(0);animation:salesBar .6s ease forwards;}
+
+/* ── Achievement badge ── */
+.badge-trophy{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:4px 12px;border-radius:20px;
+  background:rgba(201,168,76,0.1);
+  border:1px solid rgba(201,168,76,0.3);
+  font-size:.68rem;color:#C9A84C;
+  font-family:'DM Mono',monospace;letter-spacing:.06em;
+}
+
+/* ── Brand colors ── */
+.brand-samsung{color:#1428A0;}
+.brand-realme{color:#FFD700;}
+.brand-nokia{color:#005AFF;}
+.brand-gionee{color:#E03030;}
+
+/* ── Dark/Light mode ── */
+body.light{background:#F5F0E8;color:#1A1208;}
+body.light .glass{background:rgba(245,240,232,0.94);}
+body.light .text-cream{color:#1A1208!important;}
+body.light .exp-card{background:rgba(255,252,245,0.95)!important;}
+body.light section.light-alt{background:rgba(240,235,220,0.5)!important;}
+body.light .text-slate-400,.text-slate-500{color:#5A4A2A!important;}
+body.light ::-webkit-scrollbar-track{background:#F5F0E8;}
+
+/* ── Theme toggle ── */
+.theme-toggle{position:relative;width:48px;height:26px;border-radius:13px;border:1px solid rgba(201,168,76,0.4);background:rgba(201,168,76,0.1);cursor:none;}
+.theme-toggle-thumb{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#C9A84C;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1)!important;display:flex;align-items:center;justify-content:center;font-size:10px;}
+.theme-toggle-thumb.light-thumb{transform:translateX(22px);background:#1A1208;}
+
+/* ── Download btn ── */
+.dl-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.07em;border-radius:6px;border:1px solid rgba(201,168,76,0.45);color:#C9A84C;background:rgba(201,168,76,0.08);text-decoration:none;transition:all .2s!important;cursor:none;white-space:nowrap;}
+.dl-btn:hover{background:rgba(201,168,76,0.18);border-color:rgba(201,168,76,0.7);transform:translateY(-1px);}
+</style>
+</head>
+<body>
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState, useEffect, useRef, createContext, useContext } = React;
+
+// ── THEME CTX ─────────────────────────────────────────────────────────────────
+const ThemeCtx = createContext({ dark:true, toggle:()=>{} });
+const useTheme = () => useContext(ThemeCtx);
+
+// ── DATA ──────────────────────────────────────────────────────────────────────
+
+const STATS = [
+  { num:21,   suffix:'+', label:'Years of Excellence',  icon:'🏆', color:'#C9A84C' },
+  { num:1000, suffix:'Cr+', label:'Annual Revenue Driven', icon:'💰', color:'#4CAF7D' },
+  { num:136,  suffix:'%',  label:'YoY Revenue Growth',  icon:'📈', color:'#E8C96A' },
+  { num:75,   suffix:'+',  label:'Distributors Managed', icon:'🤝', color:'#C9A84C' },
+  { num:5500, suffix:'+',  label:'Retail Partners',      icon:'🏪', color:'#4CAF7D' },
+  { num:500,  suffix:'+',  label:'Team Members Led',     icon:'👥', color:'#E8C96A' },
+];
+
+const EXPERIENCE = [
+  {
+    period:'Jan 2025 – Jul 2025',
+    role:'Distribution Head – UP West & Uttarakhand',
+    company:'Shivalik Communications Pvt Ltd',
+    brand:'Realme Mobile',
+    brandColor:'#FFD43B',
+    location:'Noida',
+    color:'#C9A84C',
+    revenue:'₹450Cr+',
+    team:'460+',
+    achievements:[
+      'Spearheaded end-to-end distribution strategy across UP West & Uttarakhand managing 30+ distributors and 3,500+ retail partners.',
+      'Led 7 Branch Managers, 50 ASM/Sellout TSM, 10 Back-office staff, and 400+ Sales Promoters.',
+      'Drove primary sales (company → distributor) and secondary sales (distributor → retailer) with month-on-month revenue growth.',
+      'Expanded market coverage by appointing new channel partners and identifying growth opportunities.',
+      'Implemented ROI-driven business strategies improving partner profitability across the region.',
+    ],
+  },
+  {
+    period:'Jun 2022 – Jan 2025',
+    role:'State Head – Rajasthan',
+    company:'Savex Technologies Pvt Ltd',
+    brand:'Samsung Mobile',
+    brandColor:'#1428A0',
+    location:'Jaipur',
+    color:'#1428A0',
+    revenue:'₹1000Cr+',
+    team:'542+',
+    achievements:[
+      'Managed sales & business operations across Rajasthan — 5,000+ retail partners & 75 distributors.',
+      'Drove ₹1,000 Crore+ annual revenue ensuring robust demand and supply forecasting.',
+      'Led 5 Zonal Managers, 22 Area Sales Managers, 15 Back-office staff, and 500+ Sales Promoters.',
+      'Delivered 136% YoY revenue growth — achieving India\'s top-performing sales zone.',
+      'Awarded No.1 Team in North 3 Region in the "Good to Great" Contest.',
+      'Recognised with Excellence Award for appointing highest number of SMDs (35) in two months — Pan India #1.',
+      'Achieved highest partner qualification rate in FTS across Pan India — benchmark for certification excellence.',
+    ],
+    highlight:true,
+  },
+  {
+    period:'Oct 2015 – May 2022',
+    role:'Zonal Manager',
+    company:'SBML',
+    brand:'Samsung Mobile',
+    brandColor:'#1428A0',
+    location:'Agra',
+    color:'#1428A0',
+    revenue:'₹450Cr',
+    team:'200+',
+    achievements:[
+      'Led sales, retail operations & business development managing ₹450 Crore annual revenue.',
+      'Maintained 98% success rate in "Champions Club" for 4 consecutive years.',
+      'Won "SARVOTAM" Award 3 times in North 3 Region (2020).',
+      'Secured Titan\'s Contest Champion title 10 times (2020), 7 times (2019), 8 times (2018).',
+      'Delivered 87% Diwali growth (2017), surpassing Pan India performance.',
+      'Recognised as Top Performer in North India — 138% growth (2016–2017).',
+    ],
+  },
+  {
+    period:'Feb 2015 – Sep 2015',
+    role:'Zonal Sales Manager',
+    company:'U D Group',
+    brand:'Gionee Mobile',
+    brandColor:'#E03030',
+    location:'Patna, Bihar',
+    color:'#E03030',
+    revenue:'',
+    team:'',
+    achievements:['Led zonal sales strategy and distribution management for Gionee Mobile across Bihar region.'],
+  },
+  {
+    period:'Jan 2012 – Jul 2014',
+    role:'Senior ASM',
+    company:'Karuna Management Services Pvt. Ltd.',
+    brand:'Samsung Mobile',
+    brandColor:'#1428A0',
+    location:'Kolkata',
+    color:'#1428A0',
+    revenue:'',
+    team:'',
+    achievements:['Managed area sales operations for Samsung Mobile, driving retail expansion and distributor performance across territory.'],
+  },
+  {
+    period:'Jan 2008 – Dec 2011',
+    role:'ASM – Bihar & Jharkhand',
+    company:'Siscon Technologist Pvt. Ltd.',
+    brand:'',
+    brandColor:'#C9A84C',
+    location:'Patna',
+    color:'#C9A84C',
+    revenue:'',
+    team:'',
+    achievements:['Built and managed area sales operations across Bihar & Jharkhand, establishing strong distributor and retail networks.'],
+  },
+  {
+    period:'Feb 2005 – Dec 2007',
+    role:'ASM – Bihar & Jharkhand',
+    company:'People Concept',
+    brand:'Nokia',
+    brandColor:'#005AFF',
+    location:'Patna',
+    color:'#005AFF',
+    revenue:'',
+    team:'',
+    achievements:['Drove Nokia mobile sales across Bihar & Jharkhand — one of India\'s fastest-growing telecom markets.'],
+  },
+  {
+    period:'Jul 2004 – Jan 2005',
+    role:'Sales Executive',
+    company:'Bharti Infotel',
+    brand:'',
+    brandColor:'#C9A84C',
+    location:'South Delhi',
+    color:'#C9A84C',
+    revenue:'',
+    team:'',
+    achievements:['Started career in direct sales — building foundational skills in customer engagement and territory management.'],
+  },
+];
+
+const COMPETENCIES = [
+  { name:'Strategic Sales Leadership',            level:98, color:'#C9A84C' },
+  { name:'Channel & Distribution Management',     level:97, color:'#E8C96A' },
+  { name:'Key Account & Relationship Management', level:96, color:'#4CAF7D' },
+  { name:'Market Expansion & Competitive Analysis',level:94, color:'#C9A84C' },
+  { name:'Business Growth & Revenue Optimization', level:98, color:'#E8C96A' },
+  { name:'Sales Team Development & Coaching',      level:95, color:'#4CAF7D' },
+  { name:'Demand Planning & Supply Chain',         level:90, color:'#C9A84C' },
+  { name:'ROI Optimization & Data-Driven Decisions',level:92, color:'#E8C96A' },
+];
+
+const AWARDS = [
+  { icon:'🏆', title:'No.1 Team – North 3 Region', org:'Samsung Mobile', year:'Good to Great Contest' },
+  { icon:'⭐', title:'Excellence Award – Pan India #1 SMD Appointments', org:'Samsung Mobile', year:'35 SMDs in 2 months' },
+  { icon:'🥇', title:'SARVOTAM Award', org:'Samsung SBML', year:'3× North 3 Region (2020)' },
+  { icon:'👑', title:"Titan's Contest Champion", org:'Samsung SBML', year:'10× (2020) · 7× (2019) · 8× (2018)' },
+  { icon:'📈', title:'Top Performer – North India', org:'Samsung SBML', year:'138% Growth (2016–17)' },
+  { icon:'🎯', title:'Champions Club Member', org:'Samsung SBML', year:'98% Success Rate – 4 Years' },
+  { icon:'🚀', title:'87% Diwali Growth', org:'Samsung SBML', year:'Surpassed Pan India (2017)' },
+  { icon:'🏅', title:'Highest FTS Partner Qualification', org:'Samsung Mobile', year:'Pan India Benchmark' },
+];
+
+const REVENUE_CHART = [
+  { year:'\'08', value:20,  label:'₹20Cr' },
+  { year:'\'10', value:35,  label:'₹35Cr' },
+  { year:'\'12', value:55,  label:'₹55Cr' },
+  { year:'\'15', value:80,  label:'₹80Cr' },
+  { year:'\'16', value:110, label:'₹110Cr' },
+  { year:'\'17', value:160, label:'₹160Cr' },
+  { year:'\'19', value:280, label:'₹280Cr' },
+  { year:'\'20', value:350, label:'₹350Cr' },
+  { year:'\'22', value:450, label:'₹450Cr' },
+  { year:'\'23', value:700, label:'₹700Cr' },
+  { year:'\'24', value:1000,label:'₹1000Cr' },
+];
+
+const TICKER_ITEMS = [
+  '21+ Years Experience','₹1000Crore Revenue','136% YoY Growth','Samsung Top Performer',
+  '5500+ Retail Partners','500+ Team Led','Pan India #1 SMD','Champions Club – 4 Years',
+  'North India Top Zone','Titan\'s Contest Champion','SARVOTAM Award 3×','Excellence Award Winner',
+];
+
+// ── HOOKS ─────────────────────────────────────────────────────────────────────
+
+function useReveal(delay=0, dir='up') {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current; if(!el) return;
+    const cls = dir==='left'?'reveal-left':dir==='right'?'reveal-right':'reveal';
+    el.classList.add(cls);
+    const obs = new IntersectionObserver(([e]) => {
+      if(e.isIntersecting){ setTimeout(()=>el.classList.add('visible'), delay); obs.unobserve(el); }
+    },{threshold:.08,rootMargin:'0px 0px -50px 0px'});
+    obs.observe(el);
+    return ()=>obs.disconnect();
+  },[delay,dir]);
+  return ref;
+}
+
+// ── ANIMATED COUNTER ──────────────────────────────────────────────────────────
+
+function Counter({ target, suffix, duration=2000 }) {
+  const [val, setVal] = useState(0);
+  const ref = useRef(null);
+  const started = useRef(false);
+  useEffect(() => {
+    const obs = new IntersectionObserver(([e]) => {
+      if(e.isIntersecting && !started.current) {
+        started.current = true;
+        const start = Date.now();
+        const tick = () => {
+          const elapsed = Date.now() - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = 1 - Math.pow(1 - progress, 3);
+          setVal(Math.floor(ease * target));
+          if(progress < 1) requestAnimationFrame(tick);
+          else setVal(target);
+        };
+        tick();
+        obs.unobserve(e.target);
+      }
+    },{threshold:.3});
+    if(ref.current) obs.observe(ref.current);
+    return ()=>obs.disconnect();
+  },[target, duration]);
+  return <span ref={ref}>{val.toLocaleString()}{suffix}</span>;
+}
+
+// ── CURSOR ────────────────────────────────────────────────────────────────────
+
+function Cursor() {
+  const dot=useRef(null), ring=useRef(null);
+  const pos=useRef({x:0,y:0}), rPos=useRef({x:0,y:0});
+  useEffect(()=>{
+    const move=e=>{pos.current={x:e.clientX,y:e.clientY};};
+    window.addEventListener('mousemove',move);
+    let raf;
+    const tick=()=>{
+      rPos.current.x+=(pos.current.x-rPos.current.x)*.12;
+      rPos.current.y+=(pos.current.y-rPos.current.y)*.12;
+      if(dot.current){dot.current.style.left=pos.current.x+'px';dot.current.style.top=pos.current.y+'px';}
+      if(ring.current){ring.current.style.left=rPos.current.x+'px';ring.current.style.top=rPos.current.y+'px';}
+      raf=requestAnimationFrame(tick);
+    };
+    tick();
+    const big=()=>{if(ring.current){ring.current.style.width='48px';ring.current.style.height='48px';}};
+    const small=()=>{if(ring.current){ring.current.style.width='34px';ring.current.style.height='34px';}};
+    document.addEventListener('mouseover',e=>{if(e.target.closest('a,button,[data-hover]'))big();else small();});
+    return()=>{window.removeEventListener('mousemove',move);cancelAnimationFrame(raf);};
+  },[]);
+  return(
+    <><div ref={dot} id="cur-dot"/><div ref={ring} id="cur-ring"/></>
+  );
+}
+
+// ── THEME TOGGLE ──────────────────────────────────────────────────────────────
+
+function ThemeToggle() {
+  const {dark,toggle}=useTheme();
+  return(
+    <button onClick={toggle} className="theme-toggle" title="Toggle theme">
+      <div className={`theme-toggle-thumb${dark?'':' light-thumb'}`}>{dark?'🌙':'☀️'}</div>
+    </button>
+  );
+}
+
+function DownloadBtn({label='Download CV'}) {
+  return(
+    <a href="#" className="dl-btn" onClick={e=>e.preventDefault()} title="Download Resume">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      {label}
+    </a>
+  );
+}
+
+// ── NAVBAR ────────────────────────────────────────────────────────────────────
+
+const NAV=[['#about','About'],['#experience','Experience'],['#revenue','Revenue'],['#awards','Awards'],['#skills','Skills'],['#contact','Contact']];
+
+function Navbar() {
+  const {dark}=useTheme();
+  const [scrolled,setScrolled]=useState(false);
+  const [active,setActive]=useState('');
+  const [open,setOpen]=useState(false);
+  useEffect(()=>{
+    const fn=()=>{
+      setScrolled(window.scrollY>50);
+      document.querySelectorAll('section[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-180)setActive(s.id);});
+    };
+    window.addEventListener('scroll',fn);
+    return()=>window.removeEventListener('scroll',fn);
+  },[]);
+  const bg=dark?'rgba(10,10,15,0.92)':'rgba(245,240,232,0.95)';
+  const txt=dark?'#8A7A60':'#5A4A2A';
+  const act='#C9A84C';
+  return(
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled?'glass border-b':'py-2'}`}
+      style={{borderColor:'rgba(201,168,76,0.18)',paddingTop:scrolled?'0.75rem':'1.25rem',paddingBottom:scrolled?'0.75rem':'1.25rem'}}>
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-4">
+        {/* Logo */}
+        <div className="font-display font-bold text-lg" style={{color:'#C9A84C',letterSpacing:'0.02em'}}>
+          VK<span style={{color:dark?'#F0EDE8':'#1A1208',fontSize:'0.7rem',fontFamily:'DM Mono',fontWeight:400,marginLeft:'8px',verticalAlign:'middle',letterSpacing:'0.12em'}}>SALES LEADER</span>
+        </div>
+        {/* Desktop links */}
+        <ul className="hidden lg:flex items-center gap-7">
+          {NAV.map(([href,label])=>(
+            <li key={href}>
+              <a href={href} className="nav-link font-sans text-xs font-medium tracking-widest uppercase transition-colors duration-200"
+                style={{color:active===href.slice(1)?act:txt}}>
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        {/* Controls */}
+        <div className="hidden md:flex items-center gap-3">
+          <DownloadBtn label="Resume"/>
+          <ThemeToggle/>
+          <a href="mailto:Singvinay81@gmail.com"
+            className="inline-flex items-center gap-2 px-4 py-2 font-mono text-xs tracking-wider rounded transition-all duration-200"
+            style={{border:'1px solid rgba(201,168,76,0.35)',color:'#C9A84C',background:'rgba(201,168,76,0.06)'}}
+            onMouseEnter={e=>{e.currentTarget.style.background='rgba(201,168,76,0.14)';}}
+            onMouseLeave={e=>{e.currentTarget.style.background='rgba(201,168,76,0.06)';}}>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#4CAF7D]" style={{animation:'glowPulse 1.5s ease-in-out infinite'}}/>
+            Available
+          </a>
+        </div>
+        {/* Mobile */}
+        <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle/>
+          <button style={{color:'#C9A84C'}} onClick={()=>setOpen(!open)}>
+            <div className="w-6 h-0.5 bg-current mb-1.5"/><div className="w-6 h-0.5 bg-current mb-1.5"/><div className="w-4 h-0.5 bg-current"/>
+          </button>
+        </div>
+      </div>
+      {open&&(
+        <div className="md:hidden glass px-6 py-4 border-t" style={{borderColor:'rgba(201,168,76,0.15)'}}>
+          {NAV.map(([href,label])=>(
+            <a key={href} href={href} onClick={()=>setOpen(false)} className="block font-sans text-sm tracking-widest py-2.5 border-b transition-colors"
+              style={{color:txt,borderColor:'rgba(201,168,76,0.08)'}}
+              onMouseEnter={e=>{e.target.style.color=act;}} onMouseLeave={e=>{e.target.style.color=txt;}}>
+              {label}
+            </a>
+          ))}
+          <div className="pt-4"><DownloadBtn/></div>
+        </div>
+      )}
+    </nav>
+  );
+}
+
+// ── PARTICLES (MONEY/SALES THEMED) ────────────────────────────────────────────
+
+function Particles() {
+  const canvasRef=useRef(null);
+  useEffect(()=>{
+    const c=canvasRef.current, ctx=c.getContext('2d');
+    let pts=[],raf;
+    const resize=()=>{c.width=window.innerWidth;c.height=window.innerHeight;};
+    resize(); window.addEventListener('resize',resize);
+    class P{
+      constructor(){this.reset();}
+      reset(){
+        this.x=Math.random()*c.width; this.y=Math.random()*c.height;
+        this.s=Math.random()*1.8+0.4; this.vx=(Math.random()-.5)*.2; this.vy=(Math.random()-.5)*.2;
+        this.op=Math.random()*.25+.05;
+        this.col=Math.random()>.6?'#C9A84C':Math.random()>.5?'#E8C96A':'#F0EDE8';
+      }
+      update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>c.width||this.y<0||this.y>c.height)this.reset();}
+      draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.s,0,Math.PI*2);ctx.fillStyle=this.col;ctx.globalAlpha=this.op;ctx.fill();}
+    }
+    for(let i=0;i<70;i++)pts.push(new P());
+    const loop=()=>{
+      ctx.clearRect(0,0,c.width,c.height);ctx.globalAlpha=1;
+      pts.forEach(p=>{p.update();p.draw();});
+      for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+        const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<90){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.strokeStyle='#C9A84C';ctx.globalAlpha=(1-d/90)*.06;ctx.lineWidth=.5;ctx.stroke();}
+      }
+      ctx.globalAlpha=1;raf=requestAnimationFrame(loop);
+    };
+    loop();
+    return()=>{cancelAnimationFrame(raf);window.removeEventListener('resize',resize);};
+  },[]);
+  return <canvas ref={canvasRef} className="absolute inset-0 z-0 pointer-events-none"/>;
+}
+
+// ── HERO ──────────────────────────────────────────────────────────────────────
+
+function Hero() {
+  const {dark}=useTheme();
+  return(
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-grid-gold">
+      <Particles/>
+      {/* Radial gold glow */}
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{background:'radial-gradient(ellipse 70% 60% at 50% 10%, rgba(201,168,76,0.12), transparent)'}}/>
+      {/* Top border line */}
+      <div className="absolute top-0 left-0 right-0 h-px z-0" style={{background:'linear-gradient(90deg,transparent,rgba(201,168,76,0.6),transparent)'}}/>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-16 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+          {/* LEFT */}
+          <div>
+            {/* Tag */}
+            <div className="anim-s1 inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+              style={{border:'1px solid rgba(201,168,76,0.35)',background:'rgba(201,168,76,0.08)'}}>
+              <span className="w-2 h-2 rounded-full bg-[#4CAF7D]" style={{animation:'glowPulse 1.5s ease-in-out infinite'}}/>
+              <span className="font-mono text-[0.68rem] tracking-widest uppercase" style={{color:'#C9A84C'}}>
+                21+ Years · Sales Leadership
+              </span>
+            </div>
+
+            {/* Name */}
+            <h1 className="font-display font-black leading-none mb-3 anim-s2">
+              <span className={`block text-5xl md:text-7xl ${dark?'text-cream':'text-[#1A1208]'}`}>Vinay</span>
+              <span className="block text-5xl md:text-7xl shimmer-text">Kumar</span>
+            </h1>
+
+            {/* Designation */}
+            <div className="font-mono text-sm md:text-base mb-3 tracking-wider anim-s3" style={{color:'#C9A84C'}}>
+              Sales VP · Business Development · Channel Management
+            </div>
+            <div className="font-mono text-xs mb-6 tracking-wider anim-s3" style={{color:'rgba(201,168,76,0.6)'}}>
+              Samsung · Realme · Nokia · Gionee
+            </div>
+
+            {/* Tagline */}
+            <p className="font-sans text-base leading-relaxed mb-8 max-w-lg anim-s4" style={{color:dark?'#A09880':'#5A4A2A'}}>
+              Seasoned Sales Leader driving{' '}
+              <span style={{color:'#C9A84C',fontWeight:600}}>₹1000 Crore+</span> annual revenue across Mobile & Consumer Electronics.
+              Expert in channel expansion, team building, and{' '}
+              <span style={{color:'#4CAF7D',fontWeight:600}}>136% YoY growth</span>.
+            </p>
+
+            {/* CTA buttons */}
+            <div className="flex flex-wrap gap-3 anim-s5">
+              {[
+                {href:'#experience', label:'View Experience →', primary:true},
+                {href:'#awards',     label:'See Awards',        primary:false},
+                {href:'#contact',    label:'Get in Touch',      primary:false},
+              ].map((b,i)=>(
+                <a key={i} href={b.href}
+                  className="inline-flex items-center gap-2 px-6 py-3 font-sans text-xs font-semibold tracking-widest uppercase rounded-lg transition-all duration-200 hover:-translate-y-0.5"
+                  style={b.primary
+                    ?{background:'#C9A84C',color:'#0A0A0F',border:'1px solid #C9A84C'}
+                    :{background:'transparent',color:dark?'#A09880':'#5A4A2A',border:'1px solid rgba(201,168,76,0.25)'}}
+                  onMouseEnter={e=>{if(b.primary){e.currentTarget.style.background='#E8C96A';}else{e.currentTarget.style.borderColor='rgba(201,168,76,0.6)';e.currentTarget.style.color='#C9A84C';}}}
+                  onMouseLeave={e=>{if(b.primary){e.currentTarget.style.background='#C9A84C';}else{e.currentTarget.style.borderColor='rgba(201,168,76,0.25)';e.currentTarget.style.color=dark?'#A09880':'#5A4A2A';}}}>
+                  {b.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT — Stats ring */}
+          <div className="hidden lg:flex justify-center items-center relative">
+            {/* Central circle */}
+            <div className="relative flex items-center justify-center w-64 h-64 rounded-full anim-float"
+              style={{background:'radial-gradient(circle,rgba(201,168,76,0.12),rgba(201,168,76,0.02))',border:'1px solid rgba(201,168,76,0.25)'}}>
+              <div className="text-center">
+                <div className="font-display font-black text-5xl text-gold">21+</div>
+                <div className="font-mono text-xs tracking-widest uppercase mt-1" style={{color:'rgba(201,168,76,0.7)'}}>Years</div>
+                <div className="font-mono text-[0.6rem] tracking-widest mt-0.5" style={{color:'rgba(201,168,76,0.5)'}}>of Excellence</div>
+              </div>
+              {/* Rotating ring */}
+              <div className="absolute inset-0 rounded-full" style={{border:'1px dashed rgba(201,168,76,0.2)',animation:'spin-slow 20s linear infinite'}}/>
+            </div>
+
+            {/* Floating stat badges */}
+            {[
+              {top:'-10%',left:'10%',  val:'₹1000Cr+', label:'Revenue',     delay:'0s'},
+              {top:'10%', right:'-5%', val:'136%',      label:'YoY Growth',  delay:'.5s'},
+              {bottom:'10%',right:'0%',val:'5500+',     label:'Partners',    delay:'1s'},
+              {bottom:'-5%',left:'15%',val:'500+',      label:'Team Led',    delay:'1.5s'},
+            ].map((b,i)=>(
+              <div key={i} className="absolute px-3 py-2 rounded-xl text-center"
+                style={{
+                  top:b.top,bottom:b.bottom,left:b.left,right:b.right,
+                  background:'rgba(18,18,26,0.9)',border:'1px solid rgba(201,168,76,0.3)',
+                  animation:`float ${5+i}s ${b.delay} ease-in-out infinite`,
+                  backdropFilter:'blur(12px)',
+                }}>
+                <div className="font-display font-bold text-base text-gold">{b.val}</div>
+                <div className="font-mono text-[0.58rem] tracking-wider" style={{color:'rgba(201,168,76,0.6)'}}>{b.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll hint */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-40">
+        <span className="font-mono text-[0.58rem] tracking-widest" style={{color:'#C9A84C'}}>SCROLL</span>
+        <div className="w-px h-10" style={{background:'linear-gradient(to bottom,#C9A84C,transparent)',animation:'glowPulse 2s ease-in-out infinite'}}/>
+      </div>
+    </section>
+  );
+}
+
+// ── ABOUT / STATS ─────────────────────────────────────────────────────────────
+
+function About() {
+  const {dark}=useTheme();
+  const ref=useReveal();
+  const doubled=[...TICKER_ITEMS,...TICKER_ITEMS];
+  const txt=dark?'#A09880':'#5A4A2A';
+  const txtP=dark?'#F0EDE8':'#1A1208';
+  return(
+    <section id="about" className="py-24 light-alt">
+      <div className="max-w-7xl mx-auto px-6">
+        <div ref={ref} className="reveal">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase mb-3 flex items-center gap-3" style={{color:'#C9A84C'}}>
+            <span className="w-8 h-px" style={{background:'#C9A84C'}}/>Profile
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-8" style={{color:txtP}}>
+            A career built on <span className="text-gold">results.</span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-10 max-w-5xl mb-12">
+            <div>
+              <p className="font-sans text-base leading-relaxed mb-4" style={{color:txt}}>
+                With over <span style={{color:'#C9A84C',fontWeight:600}}>21 years</span> of progressive leadership in Mobile & Consumer Electronics,
+                I have consistently delivered above-market growth — building distribution networks, developing high-performance teams,
+                and driving revenue from the ground up.
+              </p>
+              <p className="font-sans text-sm leading-relaxed" style={{color:txt}}>
+                From my first Sales Executive role at Bharti Infotel to leading{' '}
+                <span style={{color:'#C9A84C'}}>India's #1 sales zone at Samsung</span>,
+                every chapter has been defined by one constant — delivering results that matter.
+              </p>
+            </div>
+            <div className="space-y-2.5">
+              {[
+                {k:'Location',   v:'Noida, India',              c:'#C9A84C'},
+                {k:'Contact',    v:'+91-9771486653',             c:'#4CAF7D'},
+                {k:'Email',      v:'Singvinay81@gmail.com',      c:'#E8C96A'},
+                {k:'Sector',     v:'Mobile & Consumer Electronics',c:'#C9A84C'},
+                {k:'Education',  v:'MBA Marketing – NDIM (2004)',c:'#4CAF7D'},
+              ].map(item=>(
+                <div key={item.k} className="flex items-center gap-3 p-3 rounded-xl transition-colors duration-200"
+                  style={{border:'1px solid rgba(201,168,76,0.12)',background:'rgba(201,168,76,0.04)'}}
+                  onMouseEnter={e=>{e.currentTarget.style.borderColor='rgba(201,168,76,0.3)';e.currentTarget.style.background='rgba(201,168,76,0.08)';}}
+                  onMouseLeave={e=>{e.currentTarget.style.borderColor='rgba(201,168,76,0.12)';e.currentTarget.style.background='rgba(201,168,76,0.04)';}}>
+                  <span className="font-mono text-xs w-20 flex-shrink-0" style={{color:item.c}}>{item.k}</span>
+                  <span className="font-sans text-sm" style={{color:txtP}}>{item.v}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Stats grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {STATS.map((s,i)=>(
+              <div key={i} className="text-center p-4 rounded-2xl transition-all duration-200"
+                style={{border:'1px solid rgba(201,168,76,0.15)',background:'rgba(201,168,76,0.04)'}}
+                onMouseEnter={e=>{e.currentTarget.style.borderColor='rgba(201,168,76,0.4)';e.currentTarget.style.background='rgba(201,168,76,0.1)';e.currentTarget.style.transform='translateY(-3px)';}}
+                onMouseLeave={e=>{e.currentTarget.style.borderColor='rgba(201,168,76,0.15)';e.currentTarget.style.background='rgba(201,168,76,0.04)';e.currentTarget.style.transform='none';}}>
+                <div className="text-2xl mb-1">{s.icon}</div>
+                <div className="font-display font-black text-xl" style={{color:s.color}}>
+                  <Counter target={s.num} suffix={s.suffix} duration={2200}/>
+                </div>
+                <div className="font-mono text-[0.55rem] tracking-wider mt-0.5 leading-tight" style={{color:txt}}>{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Ticker */}
+        <div className="overflow-hidden mt-12 py-3" style={{borderTop:'1px solid rgba(201,168,76,0.12)',borderBottom:'1px solid rgba(201,168,76,0.12)',background:'rgba(201,168,76,0.02)'}}>
+          <div className="flex gap-10 whitespace-nowrap anim-ticker">
+            {doubled.map((item,i)=>(
+              <span key={i} className="inline-flex items-center gap-2 font-mono text-xs tracking-wider flex-shrink-0" style={{color:'rgba(201,168,76,0.55)'}}>
+                <span className="w-1.5 h-1.5 rounded-full" style={{background:'#C9A84C'}}/>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── REVENUE CHART ─────────────────────────────────────────────────────────────
+
+function RevenueChart() {
+  const {dark}=useTheme();
+  const ref=useReveal();
+  const [visible,setVisible]=useState(false);
+  const chartRef=useRef(null);
+  const txt=dark?'#A09880':'#5A4A2A';
+  const txtP=dark?'#F0EDE8':'#1A1208';
+  const max=1000;
+
+  useEffect(()=>{
+    const obs=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);obs.unobserve(e.target);}},{threshold:.3});
+    if(chartRef.current) obs.observe(chartRef.current);
+    return()=>obs.disconnect();
+  },[]);
+
+  return(
+    <section id="revenue" className="py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <div ref={ref} className="reveal">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase mb-3 flex items-center gap-3" style={{color:'#C9A84C'}}>
+            <span className="w-8 h-px" style={{background:'#C9A84C'}}/>Revenue Growth Journey
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-3" style={{color:txtP}}>
+            From ₹20Cr to <span className="text-gold">₹1000Cr.</span>
+          </h2>
+          <p className="font-sans text-sm mb-12" style={{color:txt}}>20 years of consistent revenue growth across Mobile & Consumer Electronics.</p>
+
+          {/* Bar chart */}
+          <div ref={chartRef} className="p-6 rounded-2xl" style={{border:'1px solid rgba(201,168,76,0.15)',background:'rgba(201,168,76,0.03)'}}>
+            <div className="flex items-end gap-3 h-64">
+              {REVENUE_CHART.map((d,i)=>{
+                const pct=(d.value/max)*100;
+                return(
+                  <div key={i} className="flex flex-col items-center gap-1.5 flex-1 group" style={{cursor:'none'}}>
+                    {/* Value label */}
+                    <div className="font-mono text-[0.58rem] tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-center whitespace-nowrap"
+                      style={{color:'#C9A84C'}}>{d.label}</div>
+                    {/* Bar */}
+                    <div className="w-full rounded-t-lg overflow-hidden relative" style={{height:`${pct*2.2}px`,minHeight:'8px',background:'rgba(201,168,76,0.1)'}}>
+                      <div className="absolute inset-x-0 bottom-0 rounded-t-lg"
+                        style={{
+                          height:'100%',
+                          background:`linear-gradient(to top,#A07830,#C9A84C,#E8C96A)`,
+                          transform:visible?'scaleY(1)':'scaleY(0)',
+                          transformOrigin:'bottom',
+                          transition:`transform .6s ${i*.07}s cubic-bezier(0.34,1.56,0.64,1)`,
+                        }}/>
+                    </div>
+                    {/* Year label */}
+                    <span className="font-mono text-[0.6rem]" style={{color:txt}}>{d.year}</span>
+                  </div>
+                );
+              })}
+            </div>
+            {/* Y axis labels */}
+            <div className="flex justify-between mt-3 pt-3 border-t" style={{borderColor:'rgba(201,168,76,0.12)'}}>
+              <span className="font-mono text-[0.6rem]" style={{color:txt}}>2004</span>
+              <span className="font-mono text-xs font-medium" style={{color:'#C9A84C'}}>₹1000 Crore+ achieved (2024)</span>
+              <span className="font-mono text-[0.6rem]" style={{color:txt}}>2024</span>
+            </div>
+          </div>
+
+          {/* Growth milestones */}
+          <div className="grid md:grid-cols-3 gap-4 mt-6">
+            {[
+              {period:'2015–2017',title:'North India Top Performer',val:'138%',label:'Growth achieved',color:'#4CAF7D'},
+              {period:'2017 Diwali',title:'Pan India Surpassed',val:'87%',label:'Festival growth',color:'#E8C96A'},
+              {period:'2022–2025',title:"India's Top Sales Zone",val:'136%',label:'YoY revenue growth',color:'#C9A84C'},
+            ].map((m,i)=>(
+              <div key={i} className="p-5 rounded-2xl" style={{border:'1px solid rgba(201,168,76,0.15)',background:'rgba(201,168,76,0.04)'}}>
+                <div className="font-mono text-[0.6rem] tracking-widest mb-2" style={{color:'rgba(201,168,76,0.55)'}}>{m.period}</div>
+                <div className="font-display text-3xl font-black mb-0.5" style={{color:m.color}}>{m.val}</div>
+                <div className="font-mono text-[0.62rem] mb-1" style={{color:txt}}>{m.label}</div>
+                <div className="font-sans text-xs font-medium" style={{color:dark?'#F0EDE8':'#1A1208'}}>{m.title}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── EXPERIENCE ────────────────────────────────────────────────────────────────
+
+function Experience() {
+  const {dark}=useTheme();
+  const titleRef=useReveal();
+  const txt=dark?'#A09880':'#5A4A2A';
+  const txtP=dark?'#F0EDE8':'#1A1208';
+  const cardBg=dark?'rgba(18,18,26,0.9)':'rgba(255,252,245,0.95)';
+
+  return(
+    <section id="experience" className="py-24 light-alt">
+      <div className="max-w-7xl mx-auto px-6">
+        <div ref={titleRef} className="reveal mb-14">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase mb-3 flex items-center gap-3" style={{color:'#C9A84C'}}>
+            <span className="w-8 h-px" style={{background:'#C9A84C'}}/>Professional Journey
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold" style={{color:txtP}}>
+            21 years of <span className="text-gold">building empires.</span>
+          </h2>
+        </div>
+
+        <div className="relative pl-6 md:pl-10">
+          <div className="timeline-spine"/>
+          <div className="space-y-6">
+            {EXPERIENCE.map((exp,i)=>{
+              const ref=useReveal(i*80);
+              return(
+                <div key={i} ref={ref} className="reveal relative">
+                  {/* Timeline dot */}
+                  <div className="absolute -left-[38px] md:-left-[46px] top-6 w-4 h-4 rounded-full border-2"
+                    style={{background:exp.color,borderColor:'#0A0A0F',boxShadow:`0 0 14px ${exp.color}70`}}/>
+
+                  <div className={`exp-card p-6 rounded-2xl backdrop-blur ${exp.highlight?'ring-1':''}`}
+                    style={{
+                      background:cardBg,
+                      border:`1px solid ${exp.color}22`,
+                      ...(exp.highlight?{ringColor:exp.color}:{}),
+                    }}
+                    onMouseEnter={e=>{e.currentTarget.style.borderColor=`${exp.color}50`;}}
+                    onMouseLeave={e=>{e.currentTarget.style.borderColor=`${exp.color}22`;}}>
+
+                    {/* Header row */}
+                    <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+                      <div>
+                        {/* Period */}
+                        <div className="font-mono text-[0.65rem] tracking-widest mb-1.5" style={{color:exp.color}}>{exp.period}</div>
+                        {/* Role */}
+                        <h3 className="font-display text-xl font-bold mb-1" style={{color:txtP}}>{exp.role}</h3>
+                        {/* Company + brand */}
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="font-sans text-sm font-semibold" style={{color:exp.color}}>{exp.company}</span>
+                          {exp.brand&&(
+                            <span className="badge-trophy" style={{background:`${exp.brandColor}14`,border:`1px solid ${exp.brandColor}40`,color:exp.brandColor}}>
+                              {exp.brand}
+                            </span>
+                          )}
+                          <span className="font-sans text-xs" style={{color:txt}}>· {exp.location}</span>
+                        </div>
+                      </div>
+
+                      {/* Metrics pills */}
+                      <div className="flex gap-2 flex-wrap">
+                        {exp.revenue&&(
+                          <div className="px-3 py-1.5 rounded-lg text-center" style={{background:'rgba(76,175,125,0.12)',border:'1px solid rgba(76,175,125,0.3)'}}>
+                            <div className="font-display font-bold text-sm" style={{color:'#4CAF7D'}}>{exp.revenue}</div>
+                            <div className="font-mono text-[0.55rem] tracking-wider" style={{color:txt}}>Revenue</div>
+                          </div>
+                        )}
+                        {exp.team&&(
+                          <div className="px-3 py-1.5 rounded-lg text-center" style={{background:'rgba(201,168,76,0.1)',border:'1px solid rgba(201,168,76,0.25)'}}>
+                            <div className="font-display font-bold text-sm" style={{color:'#C9A84C'}}>{exp.team}</div>
+                            <div className="font-mono text-[0.55rem] tracking-wider" style={{color:txt}}>Team</div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Achievement bullets */}
+                    <ul className="space-y-2">
+                      {exp.achievements.map((pt,j)=>(
+                        <li key={j} className="flex gap-2.5 text-sm leading-relaxed" style={{color:txt}}>
+                          <span className="mt-1.5 text-[0.6rem] flex-shrink-0" style={{color:exp.color}}>◆</span>
+                          <span>{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Highlight banner for top role */}
+                    {exp.highlight&&(
+                      <div className="mt-4 px-4 py-2 rounded-xl flex items-center gap-2" style={{background:'rgba(201,168,76,0.08)',border:'1px solid rgba(201,168,76,0.2)'}}>
+                        <span>👑</span>
+                        <span className="font-mono text-[0.65rem] tracking-wider" style={{color:'#C9A84C'}}>India's #1 Sales Zone — ₹1000Cr+ Annual Revenue</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── AWARDS ────────────────────────────────────────────────────────────────────
+
+function Awards() {
+  const {dark}=useTheme();
+  const titleRef=useReveal();
+  const txt=dark?'#A09880':'#5A4A2A';
+  const txtP=dark?'#F0EDE8':'#1A1208';
+  return(
+    <section id="awards" className="py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <div ref={titleRef} className="reveal mb-12">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase mb-3 flex items-center gap-3" style={{color:'#C9A84C'}}>
+            <span className="w-8 h-px" style={{background:'#C9A84C'}}/>Recognition & Awards
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold" style={{color:txtP}}>
+            Accolades that <span className="text-gold">define a career.</span>
+          </h2>
+        </div>
+        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          {AWARDS.map((a,i)=>{
+            const ref=useReveal(i*70);
+            return(
+              <div key={i} ref={ref} className="reveal">
+                <div className="exp-card h-full p-5 rounded-2xl"
+                  style={{border:'1px solid rgba(201,168,76,0.15)',background:dark?'rgba(18,18,26,0.85)':'rgba(255,252,245,0.95)'}}
+                  onMouseEnter={e=>{e.currentTarget.style.borderColor='rgba(201,168,76,0.45)';}}
+                  onMouseLeave={e=>{e.currentTarget.style.borderColor='rgba(201,168,76,0.15)';}}>
+                  {/* Icon */}
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    style={{background:'rgba(201,168,76,0.1)',border:'1px solid rgba(201,168,76,0.25)'}}>
+                    {a.icon}
+                  </div>
+                  <h3 className="font-sans text-sm font-semibold mb-1 leading-snug" style={{color:txtP}}>{a.title}</h3>
+                  <div className="font-mono text-[0.62rem] tracking-wider mb-1" style={{color:'#C9A84C'}}>{a.org}</div>
+                  <div className="font-mono text-[0.6rem]" style={{color:txt}}>{a.year}</div>
+                  {/* Gold accent line */}
+                  <div className="h-0.5 mt-4 rounded-full" style={{background:'linear-gradient(to right,#C9A84C,transparent)'}}/>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── SKILLS ────────────────────────────────────────────────────────────────────
+
+function Skills() {
+  const {dark}=useTheme();
+  const titleRef=useReveal();
+  const [visible,setVisible]=useState(false);
+  const skillRef=useRef(null);
+  const txt=dark?'#A09880':'#5A4A2A';
+  const txtP=dark?'#F0EDE8':'#1A1208';
+
+  useEffect(()=>{
+    const obs=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);obs.unobserve(e.target);}},{threshold:.2});
+    if(skillRef.current) obs.observe(skillRef.current);
+    return()=>obs.disconnect();
+  },[]);
+
+  return(
+    <section id="skills" className="py-24 light-alt">
+      <div className="max-w-7xl mx-auto px-6">
+        <div ref={titleRef} className="reveal mb-12">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase mb-3 flex items-center gap-3" style={{color:'#C9A84C'}}>
+            <span className="w-8 h-px" style={{background:'#C9A84C'}}/>Core Competencies
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold" style={{color:txtP}}>
+            Mastered through <span className="text-gold">two decades.</span>
+          </h2>
+        </div>
+
+        <div ref={skillRef} className="grid md:grid-cols-2 gap-5">
+          {COMPETENCIES.map((sk,i)=>(
+            <div key={i} className="p-5 rounded-2xl" style={{border:'1px solid rgba(201,168,76,0.12)',background:'rgba(201,168,76,0.03)'}}>
+              <div className="flex items-center justify-between mb-3">
+                <span className="font-sans text-sm font-medium" style={{color:txtP}}>{sk.name}</span>
+                <span className="font-mono text-xs font-bold" style={{color:sk.color}}>{sk.level}%</span>
+              </div>
+              <div className="h-1.5 rounded-full overflow-hidden" style={{background:'rgba(201,168,76,0.1)'}}>
+                <div className="h-full rounded-full"
+                  style={{
+                    width:visible?`${sk.level}%`:'0%',
+                    background:`linear-gradient(90deg,${sk.color}80,${sk.color})`,
+                    transition:`width .9s ${i*.1}s cubic-bezier(0.34,1.1,0.64,1)`,
+                  }}/>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Languages + Tools */}
+        <div className="grid md:grid-cols-2 gap-6 mt-8">
+          <div className="p-6 rounded-2xl" style={{border:'1px solid rgba(201,168,76,0.12)',background:'rgba(201,168,76,0.03)'}}>
+            <div className="font-mono text-[0.65rem] tracking-widest uppercase mb-4" style={{color:'#C9A84C'}}>Languages</div>
+            <div className="space-y-3">
+              {[{l:'Hindi',v:'Advanced (C1)'},{l:'Bhojpuri',v:'Advanced (C1)'},{l:'English',v:'Upper Intermediate (B2)'}].map(lang=>(
+                <div key={lang.l} className="flex items-center justify-between">
+                  <span className="font-sans text-sm" style={{color:txtP}}>{lang.l}</span>
+                  <span className="font-mono text-[0.62rem] px-2 py-0.5 rounded" style={{background:'rgba(201,168,76,0.1)',color:'#C9A84C',border:'1px solid rgba(201,168,76,0.25)'}}>{lang.v}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="p-6 rounded-2xl" style={{border:'1px solid rgba(201,168,76,0.12)',background:'rgba(201,168,76,0.03)'}}>
+            <div className="font-mono text-[0.65rem] tracking-widest uppercase mb-4" style={{color:'#C9A84C'}}>Tools & Platforms</div>
+            <div className="flex flex-wrap gap-2">
+              {['Microsoft Office','CRM Platforms','Sales Analytics','ERP Systems','Channel Management Tools','Demand Planning Software'].map(t=>(
+                <span key={t} className="font-sans text-xs px-3 py-1.5 rounded-lg"
+                  style={{background:'rgba(201,168,76,0.08)',border:'1px solid rgba(201,168,76,0.2)',color:dark?'#E0D8C8':'#4A3A1A'}}>
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Brand logos text row */}
+        <div className="mt-8 p-5 rounded-2xl flex flex-wrap items-center justify-center gap-8" style={{border:'1px solid rgba(201,168,76,0.12)',background:'rgba(201,168,76,0.02)'}}>
+          <span className="font-mono text-xs tracking-widest" style={{color:txt}}>WORKED WITH</span>
+          {[
+            {name:'Samsung',  color:'#1428A0'},
+            {name:'Realme',   color:'#FFD700'},
+            {name:'Nokia',    color:'#005AFF'},
+            {name:'Gionee',   color:'#E03030'},
+            {name:'Bharti',   color:'#C9A84C'},
+          ].map(b=>(
+            <span key={b.name} className="font-display font-bold text-xl" style={{color:b.color,opacity:.8}}>{b.name}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── CONTACT ───────────────────────────────────────────────────────────────────
+
+function Contact() {
+  const {dark}=useTheme();
+  const ref=useReveal();
+  const txt=dark?'#A09880':'#5A4A2A';
+  const txtP=dark?'#F0EDE8':'#1A1208';
+  return(
+    <section id="contact" className="py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <div ref={ref} className="reveal max-w-2xl mx-auto text-center">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase mb-3 flex items-center justify-center gap-3" style={{color:'#C9A84C'}}>
+            <span className="w-8 h-px" style={{background:'#C9A84C'}}/>Contact<span className="w-8 h-px" style={{background:'#C9A84C'}}/>
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4" style={{color:txtP}}>
+            Let's build <span className="text-gold">the next empire.</span>
+          </h2>
+          <p className="font-sans text-sm leading-relaxed mb-10" style={{color:txt}}>
+            Open to senior Sales Leadership roles — National, VP, or Business Head positions in Mobile, Consumer Electronics, or FMCG sectors.
+          </p>
+
+          {/* Email CTA */}
+          <a href="mailto:Singvinay81@gmail.com"
+            className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl mb-8 font-sans text-sm font-semibold tracking-wider transition-all duration-300 hover:-translate-y-0.5"
+            style={{background:'#C9A84C',color:'#0A0A0F'}}
+            onMouseEnter={e=>{e.currentTarget.style.background='#E8C96A';e.currentTarget.style.boxShadow='0 0 30px rgba(201,168,76,0.35)';}}
+            onMouseLeave={e=>{e.currentTarget.style.background='#C9A84C';e.currentTarget.style.boxShadow='none';}}>
+            Singvinay81@gmail.com
+            <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
+          </a>
+
+          {/* Links */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {[
+              {label:'LinkedIn',  href:'https://linkedin.com/in/vinaysingh-596b4a13', c:'#C9A84C'},
+              {label:'Phone',     href:'tel:+919771486653',                            c:'#4CAF7D'},
+              {label:'Email',     href:'mailto:Singvinay81@gmail.com',                 c:'#E8C96A'},
+            ].map(l=>(
+              <a key={l.label} href={l.href} target={l.href.startsWith('http')?'_blank':undefined} rel="noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-mono text-xs tracking-wider transition-all duration-200 hover:-translate-y-0.5"
+                style={{border:`1px solid ${l.c}30`,color:l.c,background:`${l.c}08`}}
+                onMouseEnter={e=>{e.currentTarget.style.borderColor=`${l.c}60`;e.currentTarget.style.background=`${l.c}14`;}}
+                onMouseLeave={e=>{e.currentTarget.style.borderColor=`${l.c}30`;e.currentTarget.style.background=`${l.c}08`;}}>
+                {l.label} ↗
+              </a>
+            ))}
+          </div>
+
+          {/* Info pills */}
+          <div className="flex flex-wrap justify-center gap-6 font-mono text-xs" style={{color:'rgba(201,168,76,0.5)'}}>
+            {[
+              {dot:'#4CAF7D',text:'Noida, India'},
+              {dot:'#C9A84C',text:'Open to relocation'},
+              {dot:'#E8C96A',text:'21+ Years Experience'},
+            ].map(item=>(
+              <span key={item.text} className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full" style={{background:item.dot,animation:'glowPulse 2s ease-in-out infinite'}}/>
+                {item.text}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── FOOTER ────────────────────────────────────────────────────────────────────
+
+function Footer() {
+  const {dark}=useTheme();
+  return(
+    <footer className="py-8 px-6 text-center" style={{borderTop:'1px solid rgba(201,168,76,0.12)'}}>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="font-mono text-xs tracking-widest" style={{color:'rgba(201,168,76,0.4)'}}>
+          © 2025 · Vinay Kumar · Sales Leader
+        </div>
+        <div className="font-display font-bold text-sm text-gold">VK</div>
+        <div className="flex items-center gap-2 font-mono text-xs" style={{color:'rgba(201,168,76,0.35)'}}>
+          <span className="w-1.5 h-1.5 rounded-full bg-[#4CAF7D]" style={{animation:'glowPulse 2s ease-in-out infinite'}}/>
+          Built with React + Tailwind
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+// ── FLOATING DOWNLOAD ─────────────────────────────────────────────────────────
+
+function FloatingDownload() {
+  const [visible,setVisible]=useState(false);
+  useEffect(()=>{
+    const fn=()=>setVisible(window.scrollY>400);
+    window.addEventListener('scroll',fn);
+    return()=>window.removeEventListener('scroll',fn);
+  },[]);
+  return(
+    <a href="#" onClick={e=>e.preventDefault()} title="Download Resume"
+      className="dl-btn"
+      style={{
+        position:'fixed',bottom:'2rem',right:'2rem',zIndex:60,
+        opacity:visible?1:0,transform:visible?'translateY(0) scale(1)':'translateY(12px) scale(0.9)',
+        transition:'opacity .3s,transform .3s',pointerEvents:visible?'auto':'none',
+        padding:'10px 18px',fontSize:'0.75rem',borderRadius:'8px',
+        boxShadow:'0 4px 20px rgba(201,168,76,0.25)',
+      }}>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Download CV
+    </a>
+  );
+}
+
+// ── APP ───────────────────────────────────────────────────────────────────────
+
+function App() {
+  const [dark,setDark]=useState(true);
+  const toggle=()=>{
+    setDark(prev=>{
+      const next=!prev;
+      document.body.classList.toggle('light',!next);
+      return next;
+    });
+  };
+  useEffect(()=>{document.body.classList.toggle('light',!dark);},[]);
+
+  return(
+    <ThemeCtx.Provider value={{dark,toggle}}>
+      <Cursor/>
+      <Navbar/>
+      <FloatingDownload/>
+      <main>
+        <Hero/>
+        <About/>
+        <RevenueChart/>
+        <Experience/>
+        <Awards/>
+        <Skills/>
+        <Contact/>
+      </main>
+      <Footer/>
+    </ThemeCtx.Provider>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
